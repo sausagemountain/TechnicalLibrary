@@ -8,7 +8,7 @@
         Title="MainWindow" Height="450" Width="600">
     <Grid>
         <Viewbox>
-            <Label>Ничего Интересного</Label>
+            <Label MouseLeftButtonUp="Debug_Click">Ничего Интересного</Label>
         </Viewbox>
     </Grid>
 </Window>

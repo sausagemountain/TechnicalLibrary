@@ -24,5 +24,12 @@ namespace Library
         {
             InitializeComponent();
         }
+
+        private void Debug_Click(object sender, MouseButtonEventArgs e)
+        {
+            var t = (App.Current as App).DatabaseContext;
+            //t.Database.Create();
+            t.SaveChanges();
+        }
     }
 }

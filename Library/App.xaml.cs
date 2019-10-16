@@ -13,6 +13,11 @@ namespace Library
     /// </summary>
     public partial class App : Application
     {
-        public static MyDbContext DatabaseContext { get; set; } = new MyDbContext(@"data source=.\testdb.sqlite");
+        public MyDbContext DatabaseContext { get; set; } = new MyDbContext(@"data source=.\testdb.sqlite");
+
+        private void App_Exit(object sender, ExitEventArgs e)
+        {
+            DatabaseContext.SaveChanges();
+        }
     }
 }
